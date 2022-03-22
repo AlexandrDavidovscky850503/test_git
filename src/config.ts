@@ -7,7 +7,7 @@ export interface Configuration {
 
 export function configurationFactory(): Configuration {
   return {
-    port: process.env.PORT ? parseInt(process.env.PORT, 10) : 3000,
+    port: process.env.PORT ? parseInt(process.env.PORT, 10) : 5000,
     prefix: process.env.PREFIX ?? 'api',
   };
 }
