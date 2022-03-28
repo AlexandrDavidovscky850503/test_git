@@ -41,9 +41,6 @@ async function bootstrap() {
   const appOptions = { cors: true };
   const app = await NestFactory.create(AppModule, appOptions);
   const configService = app.get(ConfigService);
-  const globalPrefix = await configService.get('prefix');
-  app.setGlobalPrefix(globalPrefix);
-  const port = configService.get('port');
 
   //   app.enableCors({
   //   origin: configService.get('FRONTEND_URL'),
